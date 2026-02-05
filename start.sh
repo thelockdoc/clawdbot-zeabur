@@ -28,6 +28,6 @@ echo '{' > /root/.openclaw/agents/main/agent/auth-profiles.json
 echo '  "openai": { "mode": "env" }' >> /root/.openclaw/agents/main/agent/auth-profiles.json
 echo '}' >> /root/.openclaw/agents/main/agent/auth-profiles.json
 chmod 600 /root/.openclaw/agents/main/agent/auth-profiles.json
-openclaw cron &
+/root/.npm/_npx/*/bin/openclaw cron &
 PORT=8080
-node -e "require('http').createServer((req,res)=>res.end('ok')).listen(PORT,'0.0.0.0')"
+node -e "require('http').createServer((req,res)=>res.end('ok')).listen(8080,'0.0.0.0')"
